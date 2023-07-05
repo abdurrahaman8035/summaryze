@@ -1,0 +1,15 @@
+body {
+    /* background-image: url("../../static/images/background.jpeg"); */
+}
+.jumbotron {
+    margin-top: 10%;
+}
+form {
+    width: 50%;
+}
+.main {
+    margin-top: 10%;
+}
+.summary-container {
+    margin-top: 5%;   
+}
