@@ -3,27 +3,27 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <div class="main">
-   <h1 class="text-center mb-5">Upload Document</h1>
-<div class="d-flex justify-content-center">
-  <form>
-  <div class="row mb-3">
-    <label for="inputFile" class="col-sm-2 col-form-label">File</label>
-    <div class="col-sm-10">
-      <input type="file" class="form-control" id="inputFile" accept=".pdf .docx .txt">
-    </div>
-    <div class="form-text text-center">
-      (Allowed formats: PDF, DOCX & TXT)
-    </div>
+  <h1 class="text-center mb-5">Upload Document</h1>
+  <div class="d-flex justify-content-center">
+    <form>
+      <div class="row mb-3">
+        <label for="inputFile" class="col-sm-2 col-form-label">File</label>
+        <div class="col-sm-10">
+          <input type="file" class="form-control" id="inputFile" accept=".pdf, .docx, .txt">
+        </div>
+        <div class="form-text text-center">
+          (Supported Formats: PDF, DOCX & TXT)
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="InputNumber" class="col-sm-2 col-form-label">Paragraphs</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="InputNumber" placeholder="Enter desired number of paragraphs">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary">Generate Summary</button>
+    </form>
   </div>
-  <div class="row mb-3">
-    <label for="InputNumber" class="col-sm-2 col-form-label">Paragraphs</label>
-    <div class="col-sm-10">
-      <input type="number" class="form-control" id="InputNumber" placeholder="Enter desired number of paragraphs">
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary">Generate Summary</button>
-</form>
 </div>
-</div>
- 
+
 {% endblock content %}
