@@ -1,8 +1,9 @@
 from django.urls import path
-from .views import homepage, add_summary, summary
+from .views import home_page, summarize, file_upload, summary
 
 urlpatterns = [
-    path("", homepage, name="home"),
-    path("new-summary/", add_summary, name="new-summary"),
-    path("summary/", summary, name="summary"),
+    path("", home_page, name="home"),
+    path("file_upload/", file_upload, name="file_upload"),
+    path("summary/<int:summary_id>/", summary, name="summary"),
+    path("summarize/", summarize, name="summarize"),
 ]
