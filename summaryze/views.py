@@ -29,11 +29,11 @@ def summarize(request):
         extracted_text = textract.process("./" + summary.document.url).decode("utf-8")
 
         # Generate summary using GPT-3 API
-        # generated_summary = generate_summary(extracted_text)
+        generated_summary = generate_summary(extracted_text)
 
         # Save extracted text and generated summary to Database
         summary.original_text = extracted_text
-        # summary.summary_text = generated_summary
+        summary.summary_text = generated_summary
         summary.save()
         return redirect("summary", summary_id=summary.pk)
     else:
