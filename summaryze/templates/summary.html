@@ -3,16 +3,18 @@
 {% block content %}
 <link rel="stylesheet" href="{% static 'css/style.css' %}">
 <div class="summary-container">
-  <div class="row mt-0">
-    <div class="col">
+  <div class="row mt-0 border responsive">
+    <div class="col border p-2">
       <h4>Original Text</h4>
-      <div style="height: 400px;" class="overflow-auto">
-        {{ summary.original_text }}
-        </div>
+      <div style="height: 400px;" class="overflow-auto border">
+          {{ summary.original_text | linebreaks }}
+      </div>
     </div>
-    <div class="col">
+    <div class="col border p-2 border">
       <h4>Summarized Text</h4>
-      
+      <div style="height: 400px;" class="overflow-auto border">
+        {{ summary.summary_text | linebreaks }}
+    </div>
     </div>
   </div>
 </div>
